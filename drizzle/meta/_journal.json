@@ -1,5 +1,34 @@
 {
   "version": "7",
   "dialect": "mysql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1781792600437,
+      "tag": "0000_long_taskmaster",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1781792972099,
+      "tag": "0001_workable_pandemic",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1781792996476,
+      "tag": "0002_yellow_bloodstorm",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1781793044889,
+      "tag": "0003_careful_golden_guardian",
+      "breakpoints": true
+    }
+  ]
 }

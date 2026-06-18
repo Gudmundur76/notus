@@ -8,6 +8,7 @@ import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
+import { registerStreamingRoutes, registerTerminalWebSocket } from "../streaming";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -36,6 +37,7 @@ async function startServer() {
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   registerStorageProxy(app);
   registerOAuthRoutes(app);
+  registerStreamingRoutes(app);
   // tRPC API
   app.use(
     "/api/trpc",
@@ -58,6 +60,7 @@ async function startServer() {
     console.log(`Port ${preferredPort} is busy, using port ${port} instead`);
   }
 
+  registerTerminalWebSocket(server);
   server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}/`);
   });
