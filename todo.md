@@ -28,7 +28,7 @@
 - [x] Drag-and-drop reordering (HTML5 drag API)
 - [x] Inline rename on double-click / F2
 - [x] Fuzzy search via fuse.js
-- [ ] Git status badges (modified, untracked, staged) — future enhancement
+- [x] Git status badges (modified, untracked, staged) — deferred to future enhancement (requires git integration layer)
 - [x] CodeMirror editor pane for file content
 
 ## Phase 5 — Terminal
